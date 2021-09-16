@@ -19,4 +19,21 @@
     <string name="screen_2_desc">Restaurants are expected to meet all relevant licensing requirements and to follow regulations—including food safety regulations</string>
     <string name="screen_2_title"><![CDATA[Order now &  pickup at door]]></string>
     <string name="screen_3_desc"><![CDATA[Delivery & takeout from the best local restaurants. Breakfast, lunch, dinner and more, delivered safely to your door]]></string>
+    <string name="login_title">Login</string>
+    <string name="signUp_title">Sign Up</string>
+    <string name="emailLabel">Email</string>
+    <string name="emailPlaceholder">Enter your email here</string>
+    <string name="passwordLabel">Password</string>
+    <string name="passwordPlaceholder">Enter your password here</string>
+    <string name="rePasswordLabel">Verify Password</string>
+    <string name="rePasswordPlaceholder">Retype your password here</string>
+    <string name="forgotBtnText">Forgot Password?</string>
+    <string name="logInText">LOGIN</string>
+    <string name="signupText">SIGN UP</string>
+    <string name="plainTextSignUp">Not an user?</string>
+    <string name="plainTextSignIn">already an user?</string>
+    <string name="signUpSirectBtnText">Sign up here</string>
+    <string name="signInDirectBtnText">Sign in here</string>
+    <string name="signInWIthText">Or sign in with</string>
+    <string name="signUpWIthText">Or sign up with</string>
 </resources>
