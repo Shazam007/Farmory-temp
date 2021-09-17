@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "311504732663",
+    "project_id": "farmory-7a00d",
+    "storage_bucket": "farmory-7a00d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:311504732663:android:e19a0eac010b03bc2aaef2",
+        "android_client_info": {
+          "package_name": "com.example.farmory"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "311504732663-vcj2ne2vtnvvpndk030kie175udg3n3u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNzgl-nRCIZOYMVbkkT8D-nJUytzULC-I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "311504732663-vcj2ne2vtnvvpndk030kie175udg3n3u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

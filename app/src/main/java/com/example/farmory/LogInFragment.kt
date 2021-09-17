@@ -1,14 +1,23 @@
 package com.example.farmory
 
 import android.os.Bundle
+import android.util.Patterns
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class LogInFragment : Fragment() {
+
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -20,7 +29,52 @@ class LogInFragment : Fragment() {
         view.findViewById<TextView>(R.id.signUpHereBtn).setOnClickListener{
             findNavController().navigate(R.id.action_logInFragment_to_signUpFragment)
         }
+        auth = Firebase.auth
+
+        view.findViewById<TextView>(R.id.logInBtn).setOnClickListener{
+            login()
+        }
 
         return view
+    }
+
+    public override fun onStart() {
+        super.onStart()
+        val currentUser = auth.currentUser
+        if(currentUser != null){
+            //redirect to homepage without login
+            findNavController().navigate(R.id.action_logInFragment_to_homeFragment)
+        }
+    }
+
+    private fun login(){
+        val userEmail = view?.findViewById<EditText>(R.id.signInEmail)
+        val userPassword = view?.findViewById<EditText>(R.id.signInPassword)
+
+        if (userEmail?.text.toString().isEmpty()){
+            userEmail?.error = "Please Enter Email"
+            userEmail?.requestFocus()
+            return
+        }
+        if(!Patterns.EMAIL_ADDRESS.matcher(userEmail?.text.toString()).matches()){
+            userEmail?.error = "Please Enter Valid Email"
+            userEmail?.requestFocus()
+            return
+        }
+        if(userPassword?.text.toString().isEmpty()){
+            userPassword?.error = "Please Enter Password"
+            userPassword?.requestFocus()
+            return
+        }
+
+        auth.signInWithEmailAndPassword(userEmail?.text.toString(), userPassword?.text.toString())
+            .addOnCompleteListener(requireActivity()) { task ->
+                if (task.isSuccessful) {
+                    val user = auth.currentUser
+                    findNavController().navigate(R.id.action_logInFragment_to_homeFragment)
+                } else {
+                    Toast.makeText(requireActivity(), "Login failed.",Toast.LENGTH_SHORT).show()
+                }
+            }
     }
 }

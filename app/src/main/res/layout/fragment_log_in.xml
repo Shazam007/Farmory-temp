@@ -64,7 +64,7 @@
         android:textColor="@color/black"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signUpEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/signInEmail" />
 
     <TextView
         android:id="@+id/forgotBtn"
@@ -78,7 +78,7 @@
         android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signUpPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/signInPassword" />
 
 
     <TextView
@@ -94,7 +94,7 @@
         android:textColor="@color/black"
         android:textSize="13sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signUpBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/logInBtn" />
 
     <TextView
         android:id="@+id/signUpHereBtn"
@@ -111,10 +111,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/plainTextSignUp"
-        app:layout_constraintTop_toBottomOf="@+id/signUpBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/logInBtn" />
 
     <EditText
-        android:id="@+id/signUpEmail"
+        android:id="@+id/signInEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -135,7 +135,7 @@
         app:layout_constraintTop_toBottomOf="@+id/emailLabel" />
 
     <EditText
-        android:id="@+id/signUpPassword"
+        android:id="@+id/signInPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -156,7 +156,7 @@
         app:layout_constraintTop_toBottomOf="@+id/passwordLabel" />
 
     <Button
-        android:id="@+id/signUpBtn"
+        android:id="@+id/logInBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
