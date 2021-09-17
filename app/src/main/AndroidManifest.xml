@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Farmory">
+        <activity android:name=".homeMenuTabs.HomeActivity"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">

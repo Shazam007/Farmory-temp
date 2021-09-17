@@ -1,19 +1,21 @@
 package com.example.farmory
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.farmory.homeMenuTabs.HomeActivity
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+
 
 class LogInFragment : Fragment() {
 
@@ -42,8 +44,12 @@ class LogInFragment : Fragment() {
         super.onStart()
         val currentUser = auth.currentUser
         if(currentUser != null){
-            //redirect to homepage without login
-            findNavController().navigate(R.id.action_logInFragment_to_homeFragment)
+            //redirect to homepage fragment without login
+            //findNavController().navigate(R.id.action_logInFragment_to_homeFragment)
+
+            //redirect to homepage activity without login
+            val intent = Intent(activity, HomeActivity::class.java)
+            startActivity(intent)
         }
     }
 
@@ -71,7 +77,10 @@ class LogInFragment : Fragment() {
             .addOnCompleteListener(requireActivity()) { task ->
                 if (task.isSuccessful) {
                     val user = auth.currentUser
-                    findNavController().navigate(R.id.action_logInFragment_to_homeFragment)
+                    //findNavController().navigate(R.id.action_logInFragment_to_homeFragment)
+                    //direct to homepage activity after login
+                    val intent = Intent(activity, HomeActivity::class.java)
+                    startActivity(intent)
                 } else {
                     Toast.makeText(requireActivity(), "Login failed.",Toast.LENGTH_SHORT).show()
                 }
