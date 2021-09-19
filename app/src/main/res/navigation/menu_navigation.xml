@@ -9,7 +9,11 @@
         android:id="@+id/menuHomeFragment"
         android:name="com.example.farmory.homeMenuTabs.MenuHomeFragment"
         android:label="fragment_menu_home"
-        tools:layout="@layout/fragment_menu_home" />
+        tools:layout="@layout/fragment_menu_home" >
+        <action
+            android:id="@+id/action_menuHomeFragment_to_categoriesFragment"
+            app:destination="@id/categoriesFragment" />
+    </fragment>
     <fragment
         android:id="@+id/menuSearchFragment"
         android:name="com.example.farmory.homeMenuTabs.MenuSearchFragment"
@@ -25,4 +29,9 @@
         android:name="com.example.farmory.homeMenuTabs.MenuProfileFragment"
         android:label="fragment_menu_profile"
         tools:layout="@layout/fragment_menu_profile" />
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.example.farmory.CategoriesFragment"
+        android:label="fragment_categories"
+        tools:layout="@layout/fragment_categories" />
 </navigation>

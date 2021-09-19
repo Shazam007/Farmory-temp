@@ -9,5 +9,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="transparent">#00FFFFFF</color>
     <color name="primaryGreen">#3FC044</color>
+    <color name="secondaryGray">#414141</color>
+    <color name="categoryBack">#E0EDE6</color>
     <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#3FC044</color>
+
 </resources>
