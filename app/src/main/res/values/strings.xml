@@ -64,5 +64,8 @@
     <string name="categoriesText">Categories</string>
     <string name="seeMoreButtonText">See More</string>
     <string name="productsText">Popular Products</string>
+    <string name="the_title">The Title</string>
+    <string name="Apple">Apple</string>
+    <string name="rs80_g">Rs80/g</string>
 
 </resources>

@@ -1,22 +1,18 @@
-package com.example.farmory.homeMenuTabs
+package com.example.farmory
 
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.farmory.Itemlist.AdapterItem
 import com.example.farmory.Itemlist.Modeitem
-import com.example.farmory.R
 import com.example.farmory.databinding.ActivityProductListBinding
 import com.example.farmory.databinding.FragmentMenuSearchBinding
 
-class MenuSearchFragment : Fragment() {
+class activity_product_list : AppCompatActivity() {
 
-    private lateinit var binding: FragmentMenuSearchBinding
+    private lateinit var binding: ActivityProductListBinding
 
     private val titles = arrayOf(
         "Apple",
@@ -34,23 +30,22 @@ class MenuSearchFragment : Fragment() {
         R.drawable.item1,
     )
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityProductListBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        binding = FragmentMenuSearchBinding.inflate(layoutInflater)
-
-        return inflater.inflate(R.layout.fragment_menu_search, container, false)
+        loadRecycleViewItems()
+//        setContentView(R.layout.activity_product_list)
     }
 
     private fun loadRecycleViewItems(){
-        val linerLayoutManager = LinearLayoutManager(requireActivity())
-//        val gridLayoutManager = GridLayoutManager(requireActivity(),2)
+//        val linerLayoutManager = LinearLayoutManager(this)
+        val gridLayoutManager = GridLayoutManager(this,2)
 //        val staggeredGridLayoutManager = StaggeredGridLayoutManager(2,1)
 
-        binding.productList1.layoutManager = linerLayoutManager
+//        binding.productList.layoutManager = linerLayoutManager
+        binding.productList.layoutManager = gridLayoutManager
 
         val itemList:ArrayList<Modeitem> = ArrayList()
 
@@ -60,8 +55,8 @@ class MenuSearchFragment : Fragment() {
             itemList.add(model)
         }
 
-        val adapterItem = AdapterItem(requireActivity(), itemList)
-        binding.productList1.adapter = adapterItem
+        val adapterItem = AdapterItem(this, itemList)
+        binding.productList.adapter = adapterItem
 
     }
 }

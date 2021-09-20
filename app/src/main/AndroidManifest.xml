@@ -9,9 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Farmory">
-        <activity android:name=".homeMenuTabs.HomeActivity"></activity>
         <activity
             android:name=".MainActivity"
+            android:exported="true" />
+        <activity android:name=".homeMenuTabs.HomeActivity" />
+        <activity
+            android:name=".activity_product_list"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
