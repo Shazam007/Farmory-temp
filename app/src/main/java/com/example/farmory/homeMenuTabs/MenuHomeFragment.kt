@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -34,8 +35,8 @@ class MenuHomeFragment : Fragment() {
         }
 
         imageID = arrayOf(R.drawable.ic_cat_vegetables,R.drawable.ic_cat_fruit,R.drawable.ic_cat_bread,R.drawable.ic_cat_meat,
-            R.drawable.ic_cat_vegetables,R.drawable.ic_cat_fruit,R.drawable.ic_cat_bread,R.drawable.ic_cat_meat,
-            R.drawable.ic_cat_vegetables,R.drawable.ic_cat_fruit,R.drawable.ic_cat_bread,R.drawable.ic_cat_meat)
+            R.drawable.ic_cat_cereals,R.drawable.ic_cat_fish,R.drawable.ic_cat_dairy,R.drawable.ic_cat_ice_cream,
+            R.drawable.ic_cat_drinks,R.drawable.ic_cat_liquor,R.drawable.ic_cat_chocolate,R.drawable.ic_cat_pepper)
 
         categoryText = resources.getStringArray(R.array.category);
 
@@ -60,6 +61,23 @@ class MenuHomeFragment : Fragment() {
                 newArrayList.add(category)
             }
         }
-        newRecyclerView.adapter = CategoryAdapter(newArrayList)
+
+        var adapter = CategoryAdapter(newArrayList)
+        newRecyclerView.adapter = adapter
+        adapter.setOnItemClickListener(object:CategoryAdapter.onItemClickListener{
+            override fun onItemClick(position: Int) {
+
+                //add code here to navigate to another activity or fragment with the category
+                // if you use fragment use  --> safe args
+                // with activity use --> putExtra with the intent
+
+                //here I added the dummy toast to show the selected item position
+
+                var clickedItem = categoryText[position]
+
+                Toast.makeText(requireActivity(), "clicked $position : $clickedItem", Toast.LENGTH_SHORT).show()
+            }
+
+        })
     }
 }

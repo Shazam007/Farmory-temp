@@ -29,16 +29,16 @@ class SplashFragment : Fragment() {
         Handler().postDelayed({
 
             if(onBoardFinished()){
-                findNavController().navigate(R.id.action_splashFragment_to_logInFragment)
+                //findNavController().navigate(R.id.action_splashFragment_to_logInFragment)
 
                 //use below code to hide sudden login screen popup
-                //val currentUser = auth.currentUser
-                //if(currentUser != null){
-                //    val intent = Intent(activity, HomeActivity::class.java)
-                //    startActivity(intent)
-                //}else{
-                //    findNavController().navigate(R.id.action_splashFragment_to_logInFragment)
-                //}
+                val currentUser = auth.currentUser
+                if(currentUser != null){
+                    val intent = Intent(activity, HomeActivity::class.java)
+                    startActivity(intent)
+                }else{
+                    findNavController().navigate(R.id.action_splashFragment_to_logInFragment)
+                }
             }else{
                 findNavController().navigate(R.id.action_splashFragment_to_viewPagerFragment)
             }

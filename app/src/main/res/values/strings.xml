@@ -11,18 +11,22 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <!-- TODO: dummy database -->
     <string-array name="category">
-        <item>Fruit</item>
         <item>Vegetable</item>
+        <item>Fruit</item>
         <item>Bakery</item>
         <item>Meat</item>
         <item>Cereal</item>
         <item>Seafood</item>
         <item>Diary</item>
-        <item>Eggs</item>
+        <item>Ice Cream</item>
         <item>Drinks</item>
         <item>Liquor</item>
         <item>Candy</item>
         <item>Spices</item>
+        <item>Biscuits</item>
+        <item>Jam</item>
+        <item>Flour</item>
+        <item>Pickle Rick</item>
     </string-array>
 
 
@@ -60,4 +64,5 @@
     <string name="categoriesText">Categories</string>
     <string name="seeMoreButtonText">See More</string>
     <string name="productsText">Popular Products</string>
+
 </resources>

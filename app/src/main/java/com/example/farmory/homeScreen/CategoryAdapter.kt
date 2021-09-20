@@ -10,17 +10,33 @@ import com.google.android.material.imageview.ShapeableImageView
 
 class CategoryAdapter(private val categoryList:ArrayList<Category>) : RecyclerView.Adapter<CategoryAdapter.MyViewHolder>() {
 
-    class MyViewHolder(itemView: View):RecyclerView.ViewHolder(itemView) {
+    private lateinit var mListener : onItemClickListener
+
+    interface onItemClickListener{
+        fun onItemClick(position: Int)
+    }
+
+    fun setOnItemClickListener(listener : onItemClickListener){
+        mListener = listener
+    }
+
+    class MyViewHolder(itemView: View, listener: onItemClickListener):RecyclerView.ViewHolder(itemView) {
 
         val categoryImage:ShapeableImageView = itemView.findViewById(R.id.category_image)
         val categoryText:TextView = itemView.findViewById(R.id.category_text)
+
+        init{
+            itemView.setOnClickListener{
+                listener.onItemClick(adapterPosition)
+            }
+        }
 
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.category_item,parent,false)
-        return MyViewHolder(itemView)
+        return MyViewHolder(itemView,mListener)
 
     }
 
@@ -35,4 +51,8 @@ class CategoryAdapter(private val categoryList:ArrayList<Category>) : RecyclerVi
     override fun getItemCount(): Int {
        return categoryList.size;
     }
+
+
+
+
 }
