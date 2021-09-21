@@ -18,7 +18,11 @@
         android:id="@+id/menuSearchFragment"
         android:name="com.example.farmory.homeMenuTabs.MenuSearchFragment"
         android:label="fragment_menu_search"
-        tools:layout="@layout/fragment_menu_search" />
+        tools:layout="@layout/fragment_menu_search" >
+        <action
+            android:id="@+id/action_menuSearchFragment_to_menuHomeFragment"
+            app:destination="@id/menuHomeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/menuCartFragment"
         android:name="com.example.farmory.homeMenuTabs.MenuCartFragment"

@@ -3,9 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Farmory-temp/app/src/main/res/drawable/cornershape.xml" value="0.2203125" />
+        <entry key="..\:/Farmory-temp/app/src/main/res/drawable/ic_cat_cereals.xml" value="0.27447916666666666" />
         <entry key="..\:/Farmory-temp/app/src/main/res/drawable/pizza.xml" value="0.23489583333333333" />
         <entry key="..\:/Farmory-temp/app/src/main/res/drawable/safety.xml" value="0.23489583333333333" />
         <entry key="..\:/Farmory-temp/app/src/main/res/layout/activity_home.xml" value="0.25" />
+        <entry key="..\:/Farmory-temp/app/src/main/res/layout/activity_item_details.xml" value="0.25833333333333336" />
         <entry key="..\:/Farmory-temp/app/src/main/res/layout/activity_main.xml" value="0.28306159420289856" />
         <entry key="..\:/Farmory-temp/app/src/main/res/layout/activity_product_list.xml" value="0.24818840579710144" />
         <entry key="..\:/Farmory-temp/app/src/main/res/layout/fragment_categories.xml" value="0.2078125" />
