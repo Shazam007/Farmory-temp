@@ -16,12 +16,12 @@ import com.example.farmory.databinding.FragmentMenuSearchBinding
 
 class MenuSearchFragment : Fragment() {
 
-    private lateinit var binding: FragmentMenuSearchBinding
+//    private lateinit var binding: FragmentMenuSearchBinding
 
     private val titles = arrayOf(
+        "Banana",
         "Apple",
-        "Apple",
-        "Apple",
+        "Cabbage",
     )
     private val descriptions = arrayOf(
         "Rs 80 / g",
@@ -34,23 +34,35 @@ class MenuSearchFragment : Fragment() {
         R.drawable.item1,
     )
 
+    private var _binding: FragmentMenuSearchBinding? = null
+    private val binding get() = _binding!!
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentMenuSearchBinding.inflate(layoutInflater)
+        _binding = FragmentMenuSearchBinding.inflate(inflater, container, false)
+        val view = binding.root
+        loadRecycleViewItems()
+//        binding = FragmentMenuSearchBinding.inflate(layoutInflater)
 
-        return inflater.inflate(R.layout.fragment_menu_search, container, false)
+//        return inflater.inflate(R.layout.fragment_menu_search, container, false)
+        return view
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
     private fun loadRecycleViewItems(){
-        val linerLayoutManager = LinearLayoutManager(requireActivity())
-//        val gridLayoutManager = GridLayoutManager(requireActivity(),2)
+//        val linerLayoutManager = LinearLayoutManager(requireActivity())
+        val gridLayoutManager = GridLayoutManager(requireActivity(),2)
 //        val staggeredGridLayoutManager = StaggeredGridLayoutManager(2,1)
 
-        binding.productList1.layoutManager = linerLayoutManager
+        binding.productList1.layoutManager = gridLayoutManager
 
         val itemList:ArrayList<Modeitem> = ArrayList()
 

@@ -10,11 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Farmory">
         <activity
-            android:name=".MainActivity"
+            android:name=".activity_product_list"
             android:exported="true" />
         <activity android:name=".homeMenuTabs.HomeActivity" />
         <activity
-            android:name=".activity_product_list"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
