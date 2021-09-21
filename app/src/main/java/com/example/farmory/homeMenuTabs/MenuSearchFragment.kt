@@ -1,19 +1,14 @@
 package com.example.farmory.homeMenuTabs
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.ImageButton
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.farmory.Itemlist.AdapterItem
 import com.example.farmory.Itemlist.Modeitem
 import com.example.farmory.R
-import com.example.farmory.databinding.ActivityProductListBinding
 import com.example.farmory.databinding.FragmentMenuSearchBinding
 
 class MenuSearchFragment : Fragment() {
@@ -29,12 +24,12 @@ class MenuSearchFragment : Fragment() {
         "Cabbage",
     )
     private val descriptions = arrayOf(
-        "Rs 80 / g",
-        "Rs 90 / g",
-        "Rs 100 / g",
-        "Rs 80 / g",
-        "Rs 90 / g",
-        "Rs 100 / g",
+        "80",
+        "90",
+        "100",
+        "80",
+        "90",
+        "100",
     )
     private val images = arrayOf(
         R.drawable.item1,
@@ -95,5 +90,9 @@ class MenuSearchFragment : Fragment() {
         val adapterItem = AdapterItem(requireActivity(), itemList)
         binding.productList1.adapter = adapterItem
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
     }
 }

@@ -2,9 +2,15 @@ package com.example.farmory
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageButton
+import android.widget.Toast
 import androidx.appcompat.app.ActionBar
+import androidx.navigation.fragment.findNavController
 import com.example.farmory.Itemlist.Modeitem
 import com.example.farmory.databinding.ActivityItemDetailsBinding
+import android.content.Intent
+import com.example.farmory.homeMenuTabs.MenuSearchFragment
+
 
 class Item_details : AppCompatActivity() {
 
@@ -29,7 +35,11 @@ class Item_details : AppCompatActivity() {
         binding.itemDescription.text = itemList[positionClicked].description
 
 
-
+        this.findViewById<ImageButton>(R.id.back_button).setOnClickListener{
+            val intent = Intent(this, MenuSearchFragment::class.java)
+            startActivity(intent)
+//            Toast.makeText(this, "cliced", Toast.LENGTH_SHORT).show()
+        }
 
     }
 }

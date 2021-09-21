@@ -5,17 +5,26 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
 import com.example.farmory.Item_details
 import com.example.farmory.databinding.ListItemBinding
 
-class AdapterItem(
-    private var context: Context,
-    private var itemList: ArrayList<Modeitem>
-): RecyclerView.Adapter<AdapterItem.HolderItem>() {
+class AdapterItem: RecyclerView.Adapter<AdapterItem.HolderItem>, Filterable{
+
+
+    private var context: Context
+    public var itemList: ArrayList<Modeitem>
+    private  var filterList: ArrayList<Modeitem>
+    private var filter:filteritems? =null
+
+    constructor(context: Context, itemList: ArrayList<Modeitem>):super(){
+
+        this.context = context
+        this.itemList = itemList
+        this.filterList = itemList
+    }
+
 
     //ViewBinding
     private lateinit var binding: ListItemBinding
@@ -77,6 +86,13 @@ class AdapterItem(
 
         }
 
+    }
+
+    override fun getFilter(): Filter {
+        if(filter == null){
+            filter = filteritems(filterList, this)
+        }
+        return filter as filteritems
     }
 
 

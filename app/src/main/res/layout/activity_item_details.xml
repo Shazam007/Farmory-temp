@@ -27,10 +27,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         >
-
-
         <!--Image-->
-
         <ImageView
             android:id="@+id/Item_image"
             android:layout_width="match_parent"
@@ -44,35 +41,320 @@
 
         </ImageView>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:orientation="vertical"
+        android:layout_marginTop="-100dp"
+        android:background="@drawable/cornershape"
+        android:backgroundTint="@color/categoryBack">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/cornershape"
+            android:backgroundTint="@color/white"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            >
+
+            <TextView
+                android:id="@+id/item_title"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Apple"
+                android:textAlignment="center"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp">
+
+            </TextView>
+            <!--Description-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/item_price_Rs"
+                    style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Rs"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="center_horizontal"
+                    android:textSize="17dp">
+
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/item_description"
+                    style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rs80_g"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="center_horizontal"
+                    android:textSize="17dp">>
+
+
+                </TextView>
+                <TextView
+                    android:id="@+id/item_price_devider"
+                    style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/divider"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="center_horizontal"
+                    android:textSize="17dp">
+
+
+                </TextView>
+                <TextView
+                    android:id="@+id/item_price_g"
+                    style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/g"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/primaryGreen"
+                    android:textSize="17dp">
+
+
+                </TextView>
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/item_price_rs"
+                    style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Rs"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:textColor="@color/secondaryGray">
+
+
+                </TextView>
+                <TextView
+                    android:id="@+id/item_price"
+                    style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rs80_g"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:textColor="@color/secondaryGray">
+
+
+                </TextView>
+                <TextView
+                    android:id="@+id/item_price_end"
+                    style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/end"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:textColor="@color/secondaryGray">
+
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/item_price_seperator"
+                    style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="|"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+                    android:layout_marginHorizontal="50dp"
+                    android:textColor="@color/secondaryGray">
+
+
+                </TextView>
+                <TextView
+                    android:id="@+id/item_review"
+                    style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="4.5(183)"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:textColor="@color/secondaryGray">
+
+
+                </TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/content_reduce_btn"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/rounded_corners"
+                    android:backgroundTint="@color/primaryGreen"
+                    android:padding="15px"
+                    android:src="@drawable/minus" />
+
+                <TextView
+                    android:id="@+id/item_quntity"
+                    style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1kg"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+
+                    android:layout_marginHorizontal="15dp"
+                    android:textColor="@color/secondaryGray">
+
+
+                </TextView>
+
+                <ImageButton
+                    android:id="@+id/content_increce_btn"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/rounded_corners"
+                    android:backgroundTint="@color/primaryGreen"
+                    android:padding="15px"
+                    android:src="@drawable/ic_back" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:layout_marginLeft="20dp"
+           android:layout_marginRight="20dp"
+           android:layout_marginBottom="10dp">
+
+           <Button
+               android:layout_width="match_parent"
+               android:layout_height="60dp"
+               android:text="Add to Cart"
+               android:fontFamily="@font/poppins_bold"
+               android:textStyle="bold"
+               app:backgroundTint="@color/primaryGreen"
+               app:cornerRadius="9dp">
+
+           </Button>
+
+       </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/cornershape"
+            android:backgroundTint="@color/white"
+            android:layout_marginHorizontal="20dp"
+
+            >
+
+            <TextView
+                android:id="@+id/description_title"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Apple"
+                android:textAlignment="center"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_marginTop="10dp">
+
+            </TextView>
+            <!--Description-->
+            <TextView
+                android:id="@+id/item_description_desc"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown print"
+                android:textAlignment="center"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center_horizontal"
+
+                android:textSize="14dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/secondaryGray">
+
+
+            </TextView>
+
+
+
+        </LinearLayout>
+    </LinearLayout>
         <!--Title-->
-        <TextView
-            android:id="@+id/item_title"
-            style="@style/TextAppearance.MaterialComponents.Subtitle1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/Apple"
-            android:textAlignment="center"
-            android:fontFamily="@font/poppins_semibold"
-            android:gravity="center_horizontal"
-            android:textSize="20dp">
 
-        </TextView>
-
-
-        <!--Description-->
-        <TextView
-            android:id="@+id/item_description"
-            style="@style/TextAppearance.MaterialComponents.Subtitle1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/rs80_g"
-            android:textAlignment="center"
-            android:fontFamily="@font/poppins_semibold"
-            android:gravity="center_horizontal"
-            android:textSize="17dp">>
-
-
-        </TextView>
 
     </LinearLayout>
+
 </androidx.cardview.widget.CardView>

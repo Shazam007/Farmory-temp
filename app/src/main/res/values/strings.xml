@@ -66,6 +66,10 @@
     <string name="productsText">Popular Products</string>
     <string name="the_title">The Title</string>
     <string name="Apple">Apple</string>
-    <string name="rs80_g">Rs80/g</string>
+    <string name="rs80_g">80</string>
+    <string name="g">Kg</string>
+    <string name="Rs">Rs.</string>
+    <string name="divider">/</string>
+    <string name="end">.00</string>
 
 </resources>
