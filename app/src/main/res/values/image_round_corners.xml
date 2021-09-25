@@ -6,4 +6,7 @@
     <style name="PromoBanner">
         <item name="cornerSize">5%</item>
     </style>
+    <style name="profile_image">
+        <item name="cornerSize">50%</item>
+    </style>
 </resources>
