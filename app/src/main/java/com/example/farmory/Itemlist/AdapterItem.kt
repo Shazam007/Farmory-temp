@@ -10,13 +10,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.farmory.Item_details
 import com.example.farmory.databinding.ListItemBinding
 
-class AdapterItem: RecyclerView.Adapter<AdapterItem.HolderItem>, Filterable{
+class AdapterItem: RecyclerView.Adapter<AdapterItem.HolderItem>{
 
 
     private var context: Context
     public var itemList: ArrayList<Modeitem>
     private  var filterList: ArrayList<Modeitem>
-    private var filter:filteritems? =null
 
     constructor(context: Context, itemList: ArrayList<Modeitem>):super(){
 
@@ -88,12 +87,9 @@ class AdapterItem: RecyclerView.Adapter<AdapterItem.HolderItem>, Filterable{
 
     }
 
-    override fun getFilter(): Filter {
-        if(filter == null){
-            filter = filteritems(filterList, this)
-        }
-        return filter as filteritems
-    }
+
+
+
 
 
 }

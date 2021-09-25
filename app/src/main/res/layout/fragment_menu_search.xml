@@ -58,9 +58,8 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/productList1"
         android:layout_width="match_parent"
-        android:layout_height="532dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:paddingBottom="20dp"
         android:padding="100px"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
