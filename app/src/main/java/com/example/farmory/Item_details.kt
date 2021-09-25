@@ -40,6 +40,7 @@ class Item_details : AppCompatActivity() {
             startActivity(intent)
 //            Toast.makeText(this, "cliced", Toast.LENGTH_SHORT).show()
         }
+        supportActionBar?.hide()
 
     }
 }
