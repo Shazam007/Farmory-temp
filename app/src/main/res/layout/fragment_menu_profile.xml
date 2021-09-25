@@ -26,11 +26,26 @@
             android:src="@drawable/ic_back"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-    <!--Image-->
+        <TextView
+            android:id="@+id/homeTitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            android:text="My profile"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/back_button" />
+
+
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/profile_image"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="5dp"
             android:adjustViewBounds="true"
@@ -42,120 +57,83 @@
 
         </com.google.android.material.imageview.ShapeableImageView>
 
-
-        <ImageButton
-            android:id="@+id/edit_button"
+        <TextView
+            android:id="@+id/profileName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="36dp"
-            android:layout_gravity="right"
-            android:background="@drawable/rounded_corners"
-            android:elevation="10px"
-            android:padding="30px"
-            android:src="@drawable/edit"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            android:text="Emily Blunt"
+            android:textColor="@color/black"
+            android:textSize="25sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/back_button" />
 
         <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
             android:layout_marginTop="10dp"
-        android:backgroundTint="@color/categoryBack"
+
         android:background="@drawable/cornershape"
         android:layout_marginHorizontal="20dp"
         android:padding="20dp"
         >
 
-            <EditText
-                android:id="@+id/name"
+            <Button
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="24dp"
-                android:background="@drawable/edit_text_profile_border"
-                android:backgroundTint="@color/white"
-                android:ems="10"
-                android:enabled="false"
-                android:fontFamily="@font/poppins_light"
-                android:gravity="left"
-                android:inputType="textPersonName"
-                android:padding="15dp"
-                android:paddingTop="5sp"
-                android:paddingBottom="5sp"
-                android:text="Emily Blunt "
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/catogray_title" />
+                android:layout_height="60dp"
+                android:text="My Orders"
+                android:fontFamily="@font/poppins_bold"
+                android:textStyle="bold"
+                app:backgroundTint="@color/profileBUtton"
+                android:gravity="center_vertical"
+                app:cornerRadius="9dp"
+                android:textColor="@color/black">
 
-            <EditText
-                android:id="@+id/contact_number"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="24dp"
-                android:background="@drawable/edit_text_profile_border"
-                android:ems="10"
-                android:fontFamily="@font/poppins_light"
-                android:gravity="left"
-                android:text="+871 - 498 -5268"
-                android:enabled="false"
-                android:inputType="number"
-                android:padding="15dp"
-                android:paddingTop="5sp"
-                android:paddingBottom="5sp"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/catogray_title" />
+            </Button>
 
-            <EditText
-                android:id="@+id/email"
+            <Button
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="24dp"
-                android:background="@drawable/edit_text_profile_border"
-                android:ems="10"
-                android:fontFamily="@font/poppins_light"
-                android:gravity="left"
-                android:text="Emily18@gamil.com "
-                android:inputType="textPersonName"
-                android:padding="15dp"
-                android:enabled="false"
-                android:paddingTop="5sp"
-                android:paddingBottom="5sp"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/catogray_title" />
+                android:layout_height="60dp"
+                android:text="My Payment Cards"
+                android:fontFamily="@font/poppins_bold"
+                android:textStyle="bold"
+                app:backgroundTint="@color/profileBUtton"
+                android:gravity="center_vertical"
+                app:cornerRadius="9dp"
+                android:textColor="@color/black">
 
-            <EditText
-                android:id="@+id/address"
+            </Button>
+
+
+
+            <Button
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="24dp"
-                android:background="@drawable/edit_text_profile_border"
-                android:ems="10"
-                android:fontFamily="@font/poppins_light"
-                android:gravity="left"
-                android:textColorHint="@color/black"
-                android:hint="Cecilia Chapman,\n711-2880 Nulla St.,\nMankato Mississippi,\n96522."
-                android:inputType="textLongMessage|textPersonName"
-                android:padding="15dp"
-                android:paddingTop="5sp"
-                android:paddingBottom="5sp"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                android:enabled="false"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/catogray_title" />
+                android:layout_height="60dp"
+                android:text="My address"
+                android:fontFamily="@font/poppins_bold"
+                android:textStyle="bold"
+                app:backgroundTint="@color/profileBUtton"
+                android:gravity="center_vertical"
+                app:cornerRadius="9dp"
+                android:textColor="@color/black">
+
+            </Button>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Settings"
+                android:fontFamily="@font/poppins_bold"
+                android:textStyle="bold"
+                app:backgroundTint="@color/profileBUtton"
+                android:gravity="center_vertical"
+                app:cornerRadius="9dp"
+                android:textColor="@color/black">
+
+            </Button>
+
 
 
     </LinearLayout>

@@ -297,6 +297,7 @@
                android:fontFamily="@font/poppins_bold"
                android:textStyle="bold"
                app:backgroundTint="@color/primaryGreen"
+               android:gravity="center_vertical"
                app:cornerRadius="9dp">
 
            </Button>
