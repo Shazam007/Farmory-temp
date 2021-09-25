@@ -58,16 +58,16 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/productList1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:padding="100px"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search_item"
+        android:layout_height="match_parent"
+        android:layout_marginTop="228dp"
         android:background="@drawable/cornershape"
         android:backgroundTint="@color/categoryBack"
+        android:padding="100px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
 
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

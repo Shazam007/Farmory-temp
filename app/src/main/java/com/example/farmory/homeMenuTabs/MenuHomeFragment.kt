@@ -8,9 +8,14 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.farmory.Itemlist.AdapterItem
+import com.example.farmory.Itemlist.Modeitem
 import com.example.farmory.R
+import com.example.farmory.databinding.FragmentMenuHomeBinding
+import com.example.farmory.databinding.FragmentMenuSearchBinding
 import com.example.farmory.homeScreen.Category
 import com.example.farmory.homeScreen.CategoryAdapter
 
@@ -23,12 +28,46 @@ class MenuHomeFragment : Fragment() {
     lateinit var categoryText : Array<String>
 
 
+
+    private val titles = arrayOf(
+        "Banana",
+        "Apple",
+        "Cabbage",
+        "Banana",
+        "Apple",
+        "Cabbage",
+    )
+    private val descriptions = arrayOf(
+        "80",
+        "90",
+        "100",
+        "80",
+        "90",
+        "100",
+    )
+    private val images = arrayOf(
+        R.drawable.item1,
+        R.drawable.item1,
+        R.drawable.item1,
+        R.drawable.item1,
+        R.drawable.item1,
+        R.drawable.item1,
+    )
+
+    private var _binding: FragmentMenuHomeBinding? = null
+    private val binding get() = _binding!!
+
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        _binding = FragmentMenuHomeBinding.inflate(inflater, container, false)
+        val view = binding.root
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_menu_home, container, false)
+//        val view = inflater.inflate(R.layout.fragment_menu_home, container, false)
 
         view.findViewById<TextView>(R.id.seeMoreCategoriesButton).setOnClickListener{
             findNavController().navigate(R.id.action_menuHomeFragment_to_categoriesFragment)
@@ -58,6 +97,7 @@ class MenuHomeFragment : Fragment() {
         newArrayList = arrayListOf<Category>()
         getUserdata()
 
+        loadRecycleViewItems()
         return view
     }
 
@@ -87,5 +127,32 @@ class MenuHomeFragment : Fragment() {
             }
 
         })
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
+
+
+    private fun loadRecycleViewItems(){
+//        val linerLayoutManager = LinearLayoutManager(requireActivity())
+        val gridLayoutManager = GridLayoutManager(requireActivity(),2)
+//        val staggeredGridLayoutManager = StaggeredGridLayoutManager(2,1)
+
+        binding.productRecyclerView.layoutManager = gridLayoutManager
+
+        val itemList:ArrayList<Modeitem> = ArrayList()
+
+        for (i in titles.indices){
+            val model = Modeitem(titles[i],descriptions[i],images[i])
+
+            itemList.add(model)
+        }
+
+        val adapterItem = AdapterItem(requireActivity(), itemList)
+        binding.productRecyclerView.adapter = adapterItem
+
     }
 }
