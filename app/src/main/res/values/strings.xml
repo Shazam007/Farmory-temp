@@ -73,6 +73,13 @@
     <string name="safetyInfo2">Establish designated pick-up zones for customers to help maintain social distancing.</string>
     <string name="safetyInfo3">Practice social distancing when delivering food, offering “no touch” deliveries.</string>
     <string name="safetyInfo4">Routinely clean and sanitize coolers and insulated bags used to deliver foods.</string>
+    <string name="the_title">The Title</string>
+    <string name="Apple">Apple</string>
+    <string name="rs80_g">80</string>
+    <string name="g">Kg</string>
+    <string name="Rs">Rs.</string>
+    <string name="divider">/</string>
+    <string name="end">.00</string>
 
 
 </resources>
