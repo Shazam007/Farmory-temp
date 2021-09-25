@@ -34,6 +34,14 @@ class MenuHomeFragment : Fragment() {
             findNavController().navigate(R.id.action_menuHomeFragment_to_categoriesFragment)
         }
 
+        view.findViewById<com.google.android.material.imageview.ShapeableImageView>(R.id.banner1).setOnClickListener{
+            findNavController().navigate(R.id.action_menuHomeFragment_to_promotionFragment)
+        }
+
+        view.findViewById<com.google.android.material.imageview.ShapeableImageView>(R.id.banner2).setOnClickListener{
+            findNavController().navigate(R.id.action_menuHomeFragment_to_safetyBannerFragment)
+        }
+
         imageID = arrayOf(R.drawable.ic_cat_vegetables,R.drawable.ic_cat_fruit,R.drawable.ic_cat_bread,R.drawable.ic_cat_meat,
             R.drawable.ic_cat_cereals,R.drawable.ic_cat_fish,R.drawable.ic_cat_dairy,R.drawable.ic_cat_ice_cream,
             R.drawable.ic_cat_drinks,R.drawable.ic_cat_liquor,R.drawable.ic_cat_chocolate,R.drawable.ic_cat_pepper)

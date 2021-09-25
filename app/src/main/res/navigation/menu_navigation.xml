@@ -13,6 +13,16 @@
         <action
             android:id="@+id/action_menuHomeFragment_to_categoriesFragment"
             app:destination="@id/categoriesFragment" />
+        <action
+            android:id="@+id/action_menuHomeFragment_to_promotionFragment"
+            app:destination="@id/promotionFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_menuHomeFragment_to_safetyBannerFragment"
+            app:destination="@id/safetyBannerFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/menuSearchFragment"
@@ -39,5 +49,27 @@
             app:destination="@id/menuHomeFragment"
             app:popUpTo="@id/categoriesFragment"
             app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/promotionFragment"
+        android:name="com.example.farmory.startScreens.PromotionFragment"
+        android:label="fragment_promotion"
+        tools:layout="@layout/fragment_promotion" >
+        <action
+            android:id="@+id/action_promotionFragment_to_menuHomeFragment"
+            app:destination="@id/menuHomeFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/safetyBannerFragment"
+        android:name="com.example.farmory.homeScreen.SafetyBannerFragment"
+        android:label="fragment_safety_banner"
+        tools:layout="@layout/fragment_safety_banner" >
+        <action
+            android:id="@+id/action_safetyBannerFragment_to_menuHomeFragment"
+            app:destination="@id/menuHomeFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
     </fragment>
 </navigation>

@@ -3,4 +3,7 @@
     <style name="Circular">
         <item name="cornerSize">8%</item>
     </style>
+    <style name="PromoBanner">
+        <item name="cornerSize">5%</item>
+    </style>
 </resources>
