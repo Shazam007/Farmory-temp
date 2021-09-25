@@ -32,12 +32,12 @@ class MenuSearchFragment : Fragment() {
         "100",
     )
     private val images = arrayOf(
+        R.drawable.banana,
         R.drawable.item1,
+        R.drawable.cabbage,
+        R.drawable.banana,
         R.drawable.item1,
-        R.drawable.item1,
-        R.drawable.item1,
-        R.drawable.item1,
-        R.drawable.item1,
+        R.drawable.cabbage,
     )
 
     private var _binding: FragmentMenuSearchBinding? = null

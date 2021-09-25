@@ -4,7 +4,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:contentPadding="10dp"
     app:cardCornerRadius="23dp"
     app:cardUseCompatPadding="true"
     android:background="@drawable/cornershape">
@@ -21,13 +20,13 @@
         <ImageView
             android:id="@+id/Item_image"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="130dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:adjustViewBounds="true"
             android:contentDescription="TODO"
-            android:src="@drawable/item1">
+            android:scaleType="fitXY"
+            android:src="@drawable/banana">
 
         </ImageView>
 

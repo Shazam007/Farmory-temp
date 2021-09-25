@@ -4,9 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
-    app:cardUseCompatPadding="true"
-    app:cardCornerRadius="5dp"
     tools:context=".Item_details">
 
     <ImageButton
@@ -31,13 +28,13 @@
         <ImageView
             android:id="@+id/Item_image"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="300dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:adjustViewBounds="true"
             android:contentDescription="TODO"
-            android:src="@drawable/item1">
+            android:scaleType="fitXY"
+            android:src="@drawable/banana">
 
         </ImageView>
 
@@ -185,21 +182,7 @@
 
 
                 </TextView>
-                <TextView
-                    android:id="@+id/item_price_end"
-                    style="@style/TextAppearance.MaterialComponents.Subtitle1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/end"
-                    android:textAlignment="center"
-                    android:fontFamily="@font/poppins_bold"
-                    android:gravity="center_horizontal"
-                    android:textStyle="bold"
-                    android:textSize="15dp"
-                    android:textColor="@color/secondaryGray">
 
-
-                </TextView>
 
                 <TextView
                     android:id="@+id/item_price_seperator"
@@ -256,14 +239,30 @@
                     style="@style/TextAppearance.MaterialComponents.Subtitle1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="1kg"
+                    android:text="1"
                     android:textAlignment="center"
                     android:fontFamily="@font/poppins_bold"
                     android:gravity="center_horizontal"
                     android:textStyle="bold"
                     android:textSize="17dp"
+                    android:layout_marginLeft="17dp"
+                    android:textColor="@color/secondaryGray">
 
-                    android:layout_marginHorizontal="15dp"
+
+                </TextView>
+                <TextView
+                    android:id="@+id/item_quntity_kg"
+                    style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="kg"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:layout_marginRight="17dp"
+                    android:textSize="17dp"
+
                     android:textColor="@color/secondaryGray">
 
 
@@ -297,7 +296,7 @@
                android:fontFamily="@font/poppins_bold"
                android:textStyle="bold"
                app:backgroundTint="@color/primaryGreen"
-               android:gravity="center_vertical"
+               android:gravity="center"
                app:cornerRadius="9dp">
 
            </Button>
