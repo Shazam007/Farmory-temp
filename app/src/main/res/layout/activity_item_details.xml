@@ -108,7 +108,7 @@
                     android:textAlignment="center"
                     android:fontFamily="@font/poppins_semibold"
                     android:gravity="center_horizontal"
-                    android:textSize="17dp">>
+                    android:textSize="17dp">
 
 
                 </TextView>
@@ -276,7 +276,7 @@
                     android:background="@drawable/rounded_corners"
                     android:backgroundTint="@color/primaryGreen"
                     android:padding="15px"
-                    android:src="@drawable/ic_back" />
+                    android:src="@drawable/feather_plus" />
 
             </LinearLayout>
 

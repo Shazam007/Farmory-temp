@@ -10,6 +10,7 @@ import com.example.farmory.Itemlist.Modeitem
 import com.example.farmory.databinding.ActivityItemDetailsBinding
 import android.content.Intent
 import com.example.farmory.homeMenuTabs.MenuSearchFragment
+import com.google.android.material.internal.ContextUtils.getActivity
 
 
 class Item_details : AppCompatActivity() {
@@ -38,7 +39,6 @@ class Item_details : AppCompatActivity() {
         this.findViewById<ImageButton>(R.id.back_button).setOnClickListener{
             val intent = Intent(this, MenuSearchFragment::class.java)
             startActivity(intent)
-//            Toast.makeText(this, "cliced", Toast.LENGTH_SHORT).show()
         }
         supportActionBar?.hide()
 
