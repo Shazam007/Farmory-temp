@@ -15,6 +15,15 @@ import com.google.android.material.internal.ContextUtils.getActivity
 
 class Item_details : AppCompatActivity() {
 
+    private val Productdescriptions = arrayOf(
+        "A banana is an elongated, edible fruit – botanically a berry – produced by several kinds of large herbaceous flowering plants in the genus Musa. In some countries, bananas used for cooking may be called \"plantains\", distinguishing them from dessert bananas",
+        "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today",
+        "Cabbage, comprising several cultivars of Brassica oleracea, is a leafy green, red, or white biennial plant grown as an annual vegetable crop for its dense-leaved heads",
+        "Eggplant, aubergine or brinjal is a plant species in the nightshade family Solanaceae. Solanum melongena is grown worldwide for its edible fruit. Most commonly purple, the spongy, absorbent fruit is used in several cuisines. Typically used as a vegetable in cooking, it is a berry by botanical definition",
+        "The carrot is a root vegetable, typically orange in color, though purple, black, red, white, and yellow cultivars exist, all of which are domesticated forms of the wild carrot, Daucus carota, native to Europe and Southwestern Asia.",
+        "A mango is an edible stone fruit produced by the tropical tree Mangifera indica which is believed to have originated from the region between northwestern Myanmar, Bangladesh, and northeastern India",
+    )
+
 
     private lateinit var  binding: ActivityItemDetailsBinding
 
@@ -36,6 +45,8 @@ class Item_details : AppCompatActivity() {
         binding.itemTitle.text = itemList[positionClicked].title
         binding.ItemImage.setImageResource(itemList[positionClicked].image)
         binding.itemDescription.text = itemList[positionClicked].description
+        binding.descriptionTitle.text = itemList[positionClicked].title
+        binding.itemDescriptionDesc.text = Productdescriptions[positionClicked]
         binding.itemQuntity.text = qunty.toString()
         binding.itemPrice.text = (itemList[positionClicked].description.toInt() * qunty ).toFloat().toString()
 
