@@ -73,10 +73,10 @@
         android:layout_marginTop="3dp"
         android:fontFamily="@font/poppins_medium"
         android:text="@string/deliveryAddressValue"
+        android:textColor="@color/primaryGreen"
         android:textSize="13sp"
         app:layout_constraintStart_toEndOf="@+id/imageButton"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        android:textColor="@color/primaryGreen"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
         android:id="@+id/textView4"
@@ -87,8 +87,8 @@
         android:layout_marginTop="28dp"
         android:fontFamily="@font/poppins_medium"
         android:text="@string/latestDealsText"
-        android:textSize="16sp"
         android:textColor="@color/secondaryGray"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton" />
 
@@ -115,7 +115,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="15dp"
                 android:layout_marginRight="15dp"
-                android:src="@drawable/banner"
+                android:src="@drawable/banner_offer"
                 app:shapeAppearanceOverlay="@style/Circular" />
 
             <com.google.android.material.imageview.ShapeableImageView
@@ -124,17 +124,17 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="15dp"
                 android:layout_marginRight="15dp"
-                android:src="@drawable/banner"
+                android:src="@drawable/banner_safety"
                 app:shapeAppearanceOverlay="@style/Circular" />
 
-<!--            <com.google.android.material.imageview.ShapeableImageView-->
-<!--                android:id="@+id/banner3"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginEnd="15dp"-->
-<!--                android:layout_marginRight="15dp"-->
-<!--                android:src="@drawable/banner"-->
-<!--                app:shapeAppearanceOverlay="@style/Circular" />-->
+            <!--            <com.google.android.material.imageview.ShapeableImageView-->
+            <!--                android:id="@+id/banner3"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginEnd="15dp"-->
+            <!--                android:layout_marginRight="15dp"-->
+            <!--                android:src="@drawable/banner"-->
+            <!--                app:shapeAppearanceOverlay="@style/Circular" />-->
         </LinearLayout>
     </HorizontalScrollView>
 
@@ -196,8 +196,8 @@
         android:id="@+id/category_recycler_view"
         android:layout_width="355dp"
         android:layout_height="125dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
         android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -231,5 +231,31 @@
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/category_recycler_view" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/veg1"
+        app:layout_constraintEnd_toStartOf="@+id/imageView7"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:src="@drawable/veg2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView6"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

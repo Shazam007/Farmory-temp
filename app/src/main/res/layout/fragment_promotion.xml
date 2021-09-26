@@ -40,7 +40,7 @@
         android:layout_width="326dp"
         android:layout_height="361dp"
         android:layout_marginTop="4dp"
-        android:src="@drawable/promo_banner_big"
+        android:src="@drawable/promo_banner_large"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.423"
         app:layout_constraintStart_toStartOf="parent"
