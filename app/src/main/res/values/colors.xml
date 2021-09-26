@@ -12,7 +12,7 @@
     <color name="primaryGreen">#3FC044</color>
     <color name="secondaryGray">#414141</color>
     <color name="categoryBack">#E0EDE6</color>
-    <color name="profileBUtton">#beffa6</color>
+    <color name="profileBUtton">#EEEEEE</color>
     <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#3FC044</color>
 
 

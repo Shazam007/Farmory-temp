@@ -17,10 +17,6 @@ class MenuProfileFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_menu_profile, container, false)
 
-        view.findViewById<ImageButton>(R.id.back_button).setOnClickListener{
-            findNavController().navigate(R.id.action_menuProfileFragment_to_menuHomeFragment)
-        }
-
         return view
     }
 }

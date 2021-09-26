@@ -2,6 +2,7 @@ package com.example.farmory.homeMenuTabs
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
@@ -138,11 +139,12 @@ class MenuHomeFragment : Fragment() {
 
 
     private fun loadRecycleViewItems(){
-//        val linerLayoutManager = LinearLayoutManager(requireActivity())
-        val gridLayoutManager = GridLayoutManager(requireActivity(),2)
-//        val staggeredGridLayoutManager = StaggeredGridLayoutManager(2,1)
+
+        val gridLayoutManager = GridLayoutManager(requireActivity(),2,)
+
 
         binding.productRecyclerView.layoutManager = gridLayoutManager
+        binding.productRecyclerView.setHasFixedSize(true)
 
         val itemList:ArrayList<Modeitem> = ArrayList()
 
