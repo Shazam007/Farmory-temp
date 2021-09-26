@@ -13,24 +13,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         >
-    <!--Image-->
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/profile_image"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:adjustViewBounds="true"
-            android:contentDescription="TODO"
-            android:src="@drawable/item1"
-            app:shapeAppearance="@style/profile_image"
-            app:strokeWidth="5dp"
-            android:padding="7dp">
-
-        </com.google.android.material.imageview.ShapeableImageView>
-
-
         <ImageButton
             android:id="@+id/back_button"
             android:layout_width="wrap_content"
@@ -44,80 +26,115 @@
             android:src="@drawable/ic_back"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/homeTitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginLeft="36dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            android:text="My profile"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/back_button" />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profile_image"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="5dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="TODO"
+            android:padding="7dp"
+            android:src="@drawable/profile"
+            app:shapeAppearance="@style/profile_image"
+            app:strokeWidth="5dp">
+
+        </com.google.android.material.imageview.ShapeableImageView>
+
+        <TextView
+            android:id="@+id/profileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            android:text="Emily Blunt"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/back_button" />
 
         <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:backgroundTint="@color/categoryBack"
         android:background="@drawable/cornershape"
-        android:layout_margin="20dp"
+        android:layout_marginHorizontal="20dp"
         android:padding="20dp"
         >
-        <EditText
-            android:id="@+id/name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginTop="12dp"
-            android:background="@drawable/edit_text_border"
-            android:ems="10"
-            android:fontFamily="@font/poppins_light"
-            android:gravity="left"
-            android:hint="Search what you love to shop ...."
-            android:inputType="textPersonName"
-            android:padding="15dp"
-            android:paddingTop="8sp"
-            android:paddingBottom="8sp"
-            android:textColor="@color/black"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/catogray_title" />
 
-        <EditText
-            android:id="@+id/contact_number"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginTop="12dp"
-            android:background="@drawable/edit_text_border"
-            android:ems="10"
-            android:fontFamily="@font/poppins_light"
-            android:gravity="left"
-            android:hint="Search what you love to shop ...."
-            android:inputType="textPersonName"
-            android:padding="15dp"
-            android:paddingTop="8sp"
-            android:paddingBottom="8sp"
-            android:textColor="@color/black"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/catogray_title" />
+            <Button
+                android:id="@+id/icon"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center_vertical"
+                android:text="My Orders"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:backgroundTint="@color/profileBUtton"
+                app:cornerRadius="9dp">
 
-        <EditText
-            android:id="@+id/address"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginTop="12dp"
-            android:background="@drawable/edit_text_border"
-            android:ems="10"
-            android:fontFamily="@font/poppins_light"
-            android:gravity="left"
-            android:hint="Search what you love to shop ...."
-            android:inputType="textPersonName"
-            android:padding="15dp"
-            android:paddingTop="8sp"
-            android:paddingBottom="8sp"
-            android:textColor="@color/black"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/catogray_title" />
+            </Button>
 
-       
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="My Payment Cards"
+                android:fontFamily="@font/poppins_bold"
+                android:textStyle="bold"
+                app:backgroundTint="@color/profileBUtton"
+                android:gravity="center_vertical"
+                app:cornerRadius="9dp"
+                android:textColor="@color/black">
+
+            </Button>
+
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="My address"
+                android:fontFamily="@font/poppins_bold"
+                android:textStyle="bold"
+                app:backgroundTint="@color/profileBUtton"
+                android:gravity="center_vertical"
+                app:cornerRadius="9dp"
+                android:textColor="@color/black">
+
+            </Button>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Settings"
+                android:fontFamily="@font/poppins_bold"
+                android:textStyle="bold"
+                app:backgroundTint="@color/profileBUtton"
+                android:gravity="center_vertical"
+                app:cornerRadius="9dp"
+                android:textColor="@color/black">
+
+            </Button>
+
+
+
     </LinearLayout>
 
     </LinearLayout>

@@ -42,7 +42,11 @@
         android:id="@+id/menuProfileFragment"
         android:name="com.example.farmory.homeMenuTabs.MenuProfileFragment"
         android:label="fragment_menu_profile"
-        tools:layout="@layout/fragment_menu_profile" />
+        tools:layout="@layout/fragment_menu_profile" >
+        <action
+            android:id="@+id/action_menuProfileFragment_to_menuHomeFragment"
+            app:destination="@id/menuHomeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/categoriesFragment"
         android:name="com.example.farmory.CategoriesFragment"
