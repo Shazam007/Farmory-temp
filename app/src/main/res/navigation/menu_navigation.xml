@@ -23,6 +23,9 @@
             app:destination="@id/safetyBannerFragment"
             app:enterAnim="@android:anim/slide_in_left"
             app:exitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_menuHomeFragment_to_menuSearchFragment"
+            app:destination="@id/menuSearchFragment" />
     </fragment>
     <fragment
         android:id="@+id/menuSearchFragment"
@@ -37,7 +40,11 @@
         android:id="@+id/menuCartFragment"
         android:name="com.example.farmory.homeMenuTabs.MenuCartFragment"
         android:label="fragment_menu_cart"
-        tools:layout="@layout/fragment_menu_cart" />
+        tools:layout="@layout/fragment_menu_cart" >
+        <action
+            android:id="@+id/action_menuCartFragment_to_menuSearchFragment"
+            app:destination="@id/menuSearchFragment" />
+    </fragment>
     <fragment
         android:id="@+id/menuProfileFragment"
         android:name="com.example.farmory.homeMenuTabs.MenuProfileFragment"

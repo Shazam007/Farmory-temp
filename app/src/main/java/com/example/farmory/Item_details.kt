@@ -9,6 +9,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.farmory.Itemlist.Modeitem
 import com.example.farmory.databinding.ActivityItemDetailsBinding
 import android.content.Intent
+import android.widget.Button
 import com.example.farmory.homeMenuTabs.MenuSearchFragment
 import com.google.android.material.internal.ContextUtils.getActivity
 
@@ -31,6 +32,7 @@ class Item_details : AppCompatActivity() {
     private var positionClicked:Int = 0
 
     private  var qunty:Int = 1;
+    private var product_title:String = "";
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,6 +45,7 @@ class Item_details : AppCompatActivity() {
 
 
         binding.itemTitle.text = itemList[positionClicked].title
+        product_title = itemList[positionClicked].title
         binding.ItemImage.setImageResource(itemList[positionClicked].image)
         binding.itemDescription.text = itemList[positionClicked].description
         binding.descriptionTitle.text = itemList[positionClicked].title
@@ -73,10 +76,17 @@ class Item_details : AppCompatActivity() {
             binding.itemPrice.text = (itemList[positionClicked].description.toInt() * qunty ).toFloat().toString()
         }
 
+        this.findViewById<Button>(R.id.add_to_cart).setOnClickListener{
+            Toast.makeText(applicationContext,"$qunty kg $product_title added to the cart",Toast.LENGTH_SHORT).show()
+        }
+
 
         supportActionBar?.hide()
 
     }
+
+
+
 
 
 }

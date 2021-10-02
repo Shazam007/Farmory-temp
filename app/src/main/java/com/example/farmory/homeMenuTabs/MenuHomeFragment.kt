@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
@@ -74,6 +75,9 @@ class MenuHomeFragment : Fragment() {
         view.findViewById<TextView>(R.id.seeMoreCategoriesButton).setOnClickListener{
             findNavController().navigate(R.id.action_menuHomeFragment_to_categoriesFragment)
         }
+        view.findViewById<TextView>(R.id.seeMoreProducts).setOnClickListener{
+            findNavController().navigate(R.id.action_menuHomeFragment_to_menuSearchFragment)
+        }
 
         view.findViewById<com.google.android.material.imageview.ShapeableImageView>(R.id.banner1).setOnClickListener{
             findNavController().navigate(R.id.action_menuHomeFragment_to_promotionFragment)
@@ -125,7 +129,11 @@ class MenuHomeFragment : Fragment() {
 
                 var clickedItem = categoryText[position]
 
-                Toast.makeText(requireActivity(), "clicked $position : $clickedItem", Toast.LENGTH_SHORT).show()
+                val bundle = bundleOf("cat" to clickedItem)
+                findNavController().navigate(R.id.action_menuHomeFragment_to_menuSearchFragment,bundle)
+
+//                Toast.makeText(requireActivity(), "clicked $position : $clickedItem", Toast.LENGTH_SHORT).show()
+
             }
 
         })

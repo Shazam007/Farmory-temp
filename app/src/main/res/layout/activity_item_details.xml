@@ -290,13 +290,14 @@
            android:layout_marginBottom="10dp">
 
            <Button
+               android:id="@+id/add_to_cart"
                android:layout_width="match_parent"
                android:layout_height="60dp"
-               android:text="Add to Cart"
                android:fontFamily="@font/poppins_bold"
+               android:gravity="center"
+               android:text="Add to Cart"
                android:textStyle="bold"
                app:backgroundTint="@color/primaryGreen"
-               android:gravity="center"
                app:cornerRadius="9dp">
 
            </Button>
