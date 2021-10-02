@@ -35,6 +35,9 @@
         <action
             android:id="@+id/action_menuSearchFragment_to_menuHomeFragment"
             app:destination="@id/menuHomeFragment" />
+        <action
+            android:id="@+id/action_menuSearchFragment_to_menuCartFragment"
+            app:destination="@id/menuCartFragment" />
     </fragment>
     <fragment
         android:id="@+id/menuCartFragment"
@@ -42,7 +45,7 @@
         android:label="fragment_menu_cart"
         tools:layout="@layout/fragment_menu_cart" >
         <action
-            android:id="@+id/action_menuCartFragment_to_menuSearchFragment"
+            android:id="@+id/action_menuCartFragment_to_menuSearchFragment3"
             app:destination="@id/menuSearchFragment" />
     </fragment>
     <fragment

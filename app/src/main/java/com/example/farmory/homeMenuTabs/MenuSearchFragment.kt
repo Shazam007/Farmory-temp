@@ -194,33 +194,51 @@ class MenuSearchFragment : Fragment() {
                 R.drawable.brinjal,
                 R.drawable.carrot,
             )
-        }else{
+        }else if(text == "Bakery"){
             titles = arrayOf(
-                "Banana",
-                "Apple",
-                "Cabbage",
-                "Brinjal",
-                "Carrot",
-                "Mango",
-
+                "Bread",
+                "Bun",
+                "Cup Cake",
             )
             descriptions = arrayOf(
-                "80",
-                "90",
-                "100",
-                "80",
-                "90",
-                "100",
+                "60",
+                "20",
+                "50",
             )
             images = arrayOf(
-                R.drawable.banana,
-                R.drawable.item1,
-                R.drawable.cabbage,
-                R.drawable.brinjal,
-                R.drawable.carrot,
-                R.drawable.mango,
+                R.drawable.bread,
+                R.drawable.bun,
+                R.drawable.cup_cake,
             )
+
+        }else if(text == "cereal"){
+
+        }else if(text == "Meat"){
+
+        } else if(text == "Seafood"){
+
+        }else if(text == "Diary"){
+
+        }else if(text == "Ice Cream"){
+
+        }else if(text == "Drinks"){
+
+        }else if(text == "Liquor"){
+
+        }else if(text == "Candy"){
+
+        }else if(text == "Spices"){
+
+        }else if(text == "Biscuits"){
+
+        }else if(text == "Jam"){
+
+        }else if(text == "Flour"){
+
+        }else if(text == "Pickle Rick"){
+
         }
+
 
 
 

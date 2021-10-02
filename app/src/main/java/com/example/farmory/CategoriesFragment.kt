@@ -76,7 +76,7 @@ class CategoriesFragment : Fragment() {
 //                Toast.makeText(requireActivity(), "clicked $position : $clickedItem", Toast.LENGTH_SHORT).show()
 //
                 val bundle = bundleOf("cat" to clickedItem)
-                findNavController().navigate(R.id.action_menuCartFragment_to_menuSearchFragment, bundle)
+                findNavController().navigate(R.id.action_menuCartFragment_to_menuSearchFragment3,bundle)
             }
 
         })
