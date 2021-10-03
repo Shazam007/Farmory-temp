@@ -24,7 +24,11 @@ class MenuSearchFragment : Fragment() {
         "Cabbage",
         "Brinjal",
         "Carrot",
-        "Mango",)
+        "Mango",
+        "Bread",
+        "Bun",
+        "Cup Cake",
+    )
     private var descriptions = arrayOf(
         "80",
         "90",
@@ -32,6 +36,9 @@ class MenuSearchFragment : Fragment() {
         "80",
         "90",
         "100",
+        "60",
+        "20",
+        "50",
     )
     private var images = arrayOf(
         R.drawable.banana,
@@ -40,6 +47,9 @@ class MenuSearchFragment : Fragment() {
         R.drawable.brinjal,
         R.drawable.carrot,
         R.drawable.mango,
+        R.drawable.bread,
+        R.drawable.bun,
+        R.drawable.cup_cake,
     )
 
     private val itemList:ArrayList<Modeitem> = ArrayList()
@@ -214,6 +224,21 @@ class MenuSearchFragment : Fragment() {
         }else if(text == "cereal"){
 
         }else if(text == "Meat"){
+            titles = arrayOf(
+                "Chicken",
+                "Pork",
+                "Beef",
+            )
+            descriptions = arrayOf(
+                "600",
+                "800",
+                "1000",
+            )
+            images = arrayOf(
+                R.drawable.chicken,
+                R.drawable.pork,
+                R.drawable.beef,
+            )
 
         } else if(text == "Seafood"){
 

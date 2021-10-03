@@ -41,6 +41,9 @@ class MenuHomeFragment : Fragment() {
         "Bread",
         "Bun",
         "Cup Cake",
+        "Chicken",
+        "Pork",
+        "Beef",
     )
     private val descriptions = arrayOf(
         "80",
@@ -52,6 +55,9 @@ class MenuHomeFragment : Fragment() {
         "60",
         "20",
         "50",
+        "600",
+        "800",
+        "1000",
 
     )
 
@@ -65,6 +71,9 @@ class MenuHomeFragment : Fragment() {
         R.drawable.bread,
         R.drawable.bun,
         R.drawable.cup_cake,
+        R.drawable.chicken,
+        R.drawable.pork,
+        R.drawable.beef,
     )
 
     private var _binding: FragmentMenuHomeBinding? = null

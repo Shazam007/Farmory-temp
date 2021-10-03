@@ -45,7 +45,7 @@
         android:label="fragment_menu_cart"
         tools:layout="@layout/fragment_menu_cart" >
         <action
-            android:id="@+id/action_menuCartFragment_to_menuSearchFragment3"
+            android:id="@+id/action_menuCartFragment_to_menuSearchFragment"
             app:destination="@id/menuSearchFragment" />
     </fragment>
     <fragment

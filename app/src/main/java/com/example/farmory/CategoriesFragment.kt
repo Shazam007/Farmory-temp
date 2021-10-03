@@ -9,6 +9,7 @@ import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.os.bundleOf
+import com.example.farmory.R
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -49,7 +50,12 @@ class CategoriesFragment : Fragment() {
         newRecyclerView.setHasFixedSize(true)
 
         newArrayList = arrayListOf<Category>()
+
+
+
         renderList()
+
+
 
         return view;
     }
@@ -76,7 +82,7 @@ class CategoriesFragment : Fragment() {
 //                Toast.makeText(requireActivity(), "clicked $position : $clickedItem", Toast.LENGTH_SHORT).show()
 //
                 val bundle = bundleOf("cat" to clickedItem)
-                findNavController().navigate(R.id.action_menuCartFragment_to_menuSearchFragment3,bundle)
+                findNavController().navigate(R.id.action_menuCartFragment_to_menuSearchFragment,bundle)
             }
 
         })
