@@ -28,6 +28,9 @@ class MenuSearchFragment : Fragment() {
         "Bread",
         "Bun",
         "Cup Cake",
+        "Chicken",
+        "Pork",
+        "Beef",
     )
     private var descriptions = arrayOf(
         "80",
@@ -39,7 +42,12 @@ class MenuSearchFragment : Fragment() {
         "60",
         "20",
         "50",
-    )
+        "600",
+        "800",
+        "1000",
+
+        )
+
     private var images = arrayOf(
         R.drawable.banana,
         R.drawable.item1,
@@ -50,6 +58,9 @@ class MenuSearchFragment : Fragment() {
         R.drawable.bread,
         R.drawable.bun,
         R.drawable.cup_cake,
+        R.drawable.chicken,
+        R.drawable.pork,
+        R.drawable.beef,
     )
 
     private val itemList:ArrayList<Modeitem> = ArrayList()
